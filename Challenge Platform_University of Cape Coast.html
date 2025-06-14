@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr. Quansah's Quiz Zone</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background floating shapes (optional) */
+    .shape {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .shape:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .shape:nth-child(2) {
+      bottom: 10%;
+      right: 15%;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .container {
+      max-width: 700px;
+      width: 90%;
+      padding: 60px 30px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    /* Gradient Heading with continuous typing effect */
+    h1 {
+      font-size: 36px;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff9b71);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      margin-bottom: 15px;
+      animation: typing 3s steps(30, end) infinite alternate, blink 1s infinite step-end;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: rgba(255, 255, 255, 0.75); }
+    }
+
+    header p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    .join-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 0 12px rgba(255, 123, 140, 0.5);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(255, 123, 140, 0.5);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 16px rgba(255, 123, 140, 0.8);
+      }
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 25px;
+      font-size: 14px;
+      display: block;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 14px;
+      color: #bbb;
+      text-align: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Background Shapes -->
+  <div class="shape"></div>
+  <div class="shape"></div>
+
+  <div class="container">
+    <header>
+      <h1>Mr. Quansah's Quiz Zone</h1>
+      <p>Official Learning & Challenge Platform | University of Cape Coast</p>
+    </header>
+
+    <span class="badge">Official Quiz Hub</span>
+    <h2>Enhancing Academic Excellence Through Competitive Learning</h2>
+    <p>
+      Welcome to Mr. Quansah’s Quiz Zone, an initiative designed to foster intellectual growth, promote knowledge-sharing, and encourage academic excellence among students.
+    </p>
+
+    <p>
+      This platform serves as a dedicated space for engaging quizzes, brain-stimulating challenges, and peer-based learning experiences that support both classroom education and personal development.
+    </p>
+
+    <a href="https://chat.whatsapp.com/DVbzhJKOkKw2zttevYspz7"  class="join-button">
+      💬 Join the Official WhatsApp Group
+    </a>
+    <p class="tagline">Elevate. Engage. Excel.</p>
+  </div>
+
+  <footer>
+    © 2025 Mr. Quansah's Quiz Zone | University of Cape Coast | All Rights Reserved
+  </footer>
+
+</body>
+</html>
